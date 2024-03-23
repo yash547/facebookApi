@@ -13,6 +13,8 @@ const config = require("config");
 // json variable applicationPort
 const port = config.get("applicationPort");
 
+const userRoutes = require("./src/routes/UserRoutes");
+
 const app = express(); // object created
 
 app.use(cors());
@@ -28,6 +30,9 @@ app.use(
     })
 
 );
+
+
+app.use("/",userRoutes); // here i have provided the userRoutes.js file access
 
 // it used to run the node project with the help of port number.
 app.listen(port,()=>{

@@ -13,6 +13,8 @@ router.get('/getUserName',userController.getName); // here i have created the ap
 
 router.get('/getUserN',userController.getName); // here i have created the api name
 // along with the access the controller package of userController.js file.
+// getName it is a function name which we have call from routes folder and it 
+// is defiend into the UserController.js  file.
 
 
 module.exports=router;

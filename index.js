@@ -3,6 +3,8 @@ const express = require("express");
 // cors header/import declare
 const cors = require("cors");
 // body-parser header/import declare
+// when ever the input are required to insert into the api 
+// then we requied the body-parser to be declare or import.
 const bodyparser = require("body-parser");
 
 // declare header/import config
@@ -13,6 +15,7 @@ const config = require("config");
 // json variable applicationPort
 const port = config.get("applicationPort");
 
+// here i have declare the userRoutes from Routes folder (package)
 const userRoutes = require("./src/routes/UserRoutes");
 
 const app = express(); // object created

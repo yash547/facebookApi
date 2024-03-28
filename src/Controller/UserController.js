@@ -15,3 +15,24 @@ exports.getName = async(req,res)=>{
     res.status(200).json({"Message":userServiceResult});
 
 };
+
+exports.login = async(req,res)=>{
+
+    /**
+     *  
+     *   req ---> request
+     *    res ---> response
+     * 
+     */
+
+    /**
+     * here email and password input has been given into the 
+     * login function as a argument and the login function call
+     * has been done for the userService file.
+     */
+    const response = await userService.login(req.body.email,req.body.password);
+
+
+    res.status(200).json({"Receive":response})
+
+};

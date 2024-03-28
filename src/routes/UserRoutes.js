@@ -17,4 +17,6 @@ router.get('/getUserN',userController.getName); // here i have created the api n
 // is defiend into the UserController.js  file.
 
 
+router.post('/LoginGmail',userController.login) // this line help us to create the post api.
+
 module.exports=router;

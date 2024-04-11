@@ -32,7 +32,15 @@ exports.login = async(req,res)=>{
      */
     const response = await userService.login(req.body.email,req.body.password);
 
+       if(response=="login success")
+       {
 
-    res.status(200).json({"Receive":response})
+        res.status(200).json({"Status":1,"Message":response})
 
+       }
+       else
+       {
+        
+        res.status(200).json({"Status":0,"Message":response})
+    }
 };

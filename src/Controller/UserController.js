@@ -44,3 +44,13 @@ exports.login = async(req,res)=>{
         res.status(200).json({"Status":0,"Message":response})
     }
 };
+
+
+exports.createdUser=async(req,res)=>{
+
+const response = await userService.createdUser(req.body.firstName,req.body.lastName,req.body.email,req.body.password)
+
+
+
+res.status(200).json({"Status":1,"Message":response})
+};

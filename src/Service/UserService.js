@@ -1,4 +1,5 @@
 const e = require("express");
+const userRepository = require("../Repository/userRepository");
 
 var fName=null
 var lName=null
@@ -33,5 +34,8 @@ fName=firstName
 lName=lastName
 emails=email
 pass=password
+
+await userRepository.addContent(firstName);
+
 return "Record Created";
 };

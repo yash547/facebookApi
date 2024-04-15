@@ -1,3 +1,17 @@
 {
-    "applicationPort":5421
+    "applicationPort":5421,
+     "dbConfig" : {
+
+        "host" : "localhost",
+        "database" : "postgres",
+        "user":"postgres",
+        "password":"root",
+        "port" : 5432,
+        "dialect":"postgres",
+        "query":{
+            "raw":true
+        }
+
+     }
+
 }

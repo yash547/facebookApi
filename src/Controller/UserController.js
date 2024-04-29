@@ -48,7 +48,7 @@ exports.login = async(req,res)=>{
 
 exports.createdUser=async(req,res)=>{
 
-const response = await userService.createdUser(req.body.firstName,req.body.lastName,req.body.email,req.body.password)
+const response = await userService.createdUser(req.body)
 
 
 

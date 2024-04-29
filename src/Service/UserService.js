@@ -28,14 +28,13 @@ exports.login=async(email,password)=>{
 };
 
 
-exports.createdUser =async(firstName,lastName,email,password)=>{
+exports.createdUser =async(Data)=>{
 
-fName=firstName
-lName=lastName
-emails=email
-pass=password
+    const DataModefied = {
+        firstname:Data.fName,
+    };
 
-await userRepository.addContent(firstName);
+await userRepository.addContent(DataModefied);
 
 return "Record Created";
 };
